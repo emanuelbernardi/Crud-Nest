@@ -10,7 +10,7 @@ constructor(private prisma: PrismaService){}
     async create(data: UserDTO) {
         const userExists = await this.prisma.users.findFirst({
             where: {
-                id: String (data.id),
+                email: String (data.email),
             }
         })
 
